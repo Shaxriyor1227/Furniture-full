@@ -1,0 +1,63 @@
+header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  transform: scale(1.2);
+  color: #f59e0b;
+}
+
+.active {
+  color: #f59e0b;
+  font-weight: 600;
+  border-bottom: 2px solid #f59e0b;
+  padding-bottom: 4px;
+  transform: scale(1.1);
+}
+
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 18px;
+      
+}
+
+
+
+.header-icons{
+    display: flex;
+    gap: 35px;
+    font-size: 25px;
+}
+
+.header-icons .icons{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header-icons .icons:hover{
+    color: #f59e0b;
+    transition: 0.3s;
+    transform: scale(1.2);
+}
