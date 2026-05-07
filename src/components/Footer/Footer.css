@@ -1,0 +1,125 @@
+.footer {
+  background-color: #ffffff;
+  padding: 60px 0 30px;
+  border-top: 1px solid #e5e5e5;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 0 20px; */
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 40px;
+}
+
+/* Logo va Address */
+.footer-logo {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.address {
+  color: #666;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Column Titles */
+.col-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+/* Links */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #666;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #000;
+}
+
+/* Newsletter */
+.newsletter {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.email-input {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 2px solid #000;
+  font-size: 16px;
+  outline: none;
+}
+
+.email-input::placeholder {
+  color: #999;
+}
+
+.subscribe-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 2px solid #000;
+  padding-bottom: 12px;
+  transition: all 0.3s;
+}
+
+.subscribe-btn:hover {
+  color: #d4a017;
+  border-color: #d4a017;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-left: 150px;
+  border-top: 1px solid #e5e5e5;
+  text-align: flex-start;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .newsletter {
+    justify-content: center;
+  }
+}

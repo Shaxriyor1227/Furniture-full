@@ -8,6 +8,16 @@ import product6 from "../../assets/p6.png"
 import product7 from "../../assets/p7.png"
 import product8 from "../../assets/p8.png"
 
+import f1 from "../../assets/f1.png"
+import f2 from "../../assets/f2.png"
+import f3 from "../../assets/f3.png"
+import f4 from "../../assets/f4.png"
+import f5 from "../../assets/f5.png"
+import f6 from "../../assets/f6.png"
+import f7 from "../../assets/f7.png"
+import f8 from "../../assets/f8.png"
+import f9 from "../../assets/f9.png"
+
 
 const products = [
   {
@@ -92,4 +102,44 @@ const products = [
   }
 ];
 
-export { products };
+
+const funiro = [
+  {
+    id: 1,
+    image: f1
+  },
+  {
+    id: 2,
+    image: f2
+  },
+  {
+    id: 3,
+    image: f3
+  },
+  {
+    id: 4,
+    image: f4
+  },
+  {
+    id: 5,
+    image: f5
+  },
+  {
+    id: 6,
+    image: f6
+  },
+  {
+    id: 7,
+    image: f7
+  },
+  {
+    id: 8,
+    image: f8
+  },
+  {
+    id: 9,
+    image: f9
+  }
+]
+
+export { products, funiro };

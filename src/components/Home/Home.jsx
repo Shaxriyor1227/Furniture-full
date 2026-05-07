@@ -1,9 +1,12 @@
 import React from 'react'
 import './Home.css'
-import { products } from "./data.js"
+import { products , funiro} from "./data.js"
 import card1 from "../../assets/m-card1.png"
 import card2 from "../../assets/m-card2.png"
 import card3 from "../../assets/m-card3.png"
+import b1 from "../../assets/b1.png"
+import b2 from "../../assets/b2.png"
+
 
 
 const Home = () => {
@@ -67,6 +70,102 @@ const Home = () => {
         </div>
         <button>Show More</button>
       </section>
+
+
+      <section className="inspiration-section">
+  <div className="container">
+    <div className="content-wrapper">
+
+      {/* Left Text */}
+      <div className="text-content">
+        <h1>50+ Beautiful rooms inspiration</h1>
+        <p>Our designer already made a lot of beautiful prototype of rooms that inspire you</p>
+        <button className="explore-btn">Explore More</button>
+      </div>
+
+      {/* Main Big Image */}
+      <div className="main-image">
+        <img 
+          src={b1} 
+          alt="Inner Peace Bedroom" 
+        />
+        <div className="image-overlay">
+          <p className="room-number">01 — Bed Room</p>
+          <h3 className="room-title">Inner Peace</h3>
+          <button className="arrow-btn">→</button>
+        </div>
+      </div>
+
+      {/* Right Side Image */}
+      <div className="side-image">
+        <img 
+          src={b2} 
+          alt="Dining Room" 
+        />
+        <button className="side-arrow">→</button>
+      </div>
+
+    </div>
+
+    {/* Navigation Dots */}
+    <div className="dots">
+      <span className="dot active"></span>
+      <span className="dot"></span>
+      <span className="dot"></span>
+      <span className="dot"></span>
+    </div>
+  </div>
+</section>
+
+<section className="funiro">
+  <p>Share your setup with</p>
+  <h1>#FuniroFurniture</h1>
+  <div className="funiro-imgs">
+
+
+    <div className="funiro1">
+         <div className="f1">
+            <img src={funiro[0].image} alt="Funiro 1" />
+         </div>
+         <div className="f2">
+            <img src={funiro[1].image} alt="Funiro 2" />
+          </div>
+    </div>
+
+
+    <div className="f3">
+      <img src={funiro[2].image} alt="Funiro 3" />
+    </div>
+
+  <div className="funiro2">
+    <div className="f4">
+      <img src={funiro[3].image} alt="Funiro 4" />
+    </div>
+    <div className="f5">
+      <img src={funiro[4].image} alt="Funiro 5" />
+    </div>
+  </div>
+    
+  <div className="funiro3">
+    <div className="f6">
+      <img src={funiro[5].image} alt="Funiro 6" />
+    </div>
+    <div className="f7">
+      <img src={funiro[6].image} alt="Funiro 7" />
+    </div>
+  </div>
+    
+    <div className="funiro4">
+      <div className="f8">
+      <img src={funiro[7].image} alt="Funiro 8" />
+    </div>
+    <div className="f9">
+      <img src={funiro[8].image} alt="Funiro 9" />
+    </div>
+    </div>
+    
+  </div>
+</section>
       
     </div>
   )
