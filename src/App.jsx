@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import Home from './components/Home/Home'
 import Shop from './components/Shop/Shop'
 import Asgard from './components/Asgard/Asgard'
+import Comparison from './components/Comparison/Comparison'
 import Footer from './components/Footer/Footer'
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/asgard" element={<Asgard />} />
+        <Route path="/comparison" element={<Comparison />} />
       </Routes>
       <Footer />
     </div>

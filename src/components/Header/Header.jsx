@@ -27,6 +27,7 @@ const Header = () => {
                     <ul>
                         <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
                         <li><NavLink to="/shop" onClick={closeMenu}>Shop</NavLink></li>
+                        <li><NavLink to="/comparison" onClick={closeMenu}>Comparison</NavLink></li>
                         <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
                         <li><NavLink to="/contact" onClick={closeMenu}>Contact</NavLink></li>
                     </ul>
@@ -58,6 +59,7 @@ const Header = () => {
                 <ul>
                     <li><NavLink to="/" onClick={closeMenu}>Home</NavLink></li>
                     <li><NavLink to="/shop" onClick={closeMenu}>Shop</NavLink></li>
+                    <li><NavLink to="/comparison" onClick={closeMenu}>Comparison</NavLink></li>
                     <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
                     <li><NavLink to="/contact" onClick={closeMenu}>Contact</NavLink></li>
                 </ul>
