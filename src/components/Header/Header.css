@@ -1,63 +1,269 @@
-header{
+/* =============================
+   HEADER
+   ============================= */
+header {
     width: 100%;
-    height: 10vh;
+    height: 80px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 60px;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
 }
 
-nav ul li a {
-  text-decoration: none;
-  color: black;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-nav ul li a:hover {
-  transform: scale(1.2);
-  color: #f59e0b;
-}
-
-.active {
-  color: #f59e0b;
-  font-weight: 600;
-  border-bottom: 2px solid #f59e0b;
-  padding-bottom: 4px;
-  transform: scale(1.1);
-}
-
-
-
-.logo{
+/* ── Logo ── */
+.logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    text-decoration: none;
 }
 
-nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 15px;
-    font-size: 18px;
-      
+.logo h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
 }
 
+.logo img {
+    width: 40px;
+}
 
-
-.header-icons{
+/* ── Desktop Nav (o'rtada) ── */
+.desktop-nav {
+    flex: 1;
     display: flex;
-    gap: 35px;
-    font-size: 25px;
+    justify-content: center;
 }
 
-.header-icons .icons{
+.desktop-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+.desktop-nav ul li a {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    transition: color 0.25s, transform 0.25s;
+    display: inline-block;
+}
+
+.desktop-nav ul li a:hover {
+    color: #b88e2f;
+    transform: scale(1.08);
+}
+
+.desktop-nav ul li a.active {
+    color: #b88e2f;
+    font-weight: 600;
+    border-bottom: 2px solid #b88e2f;
+    padding-bottom: 2px;
+}
+
+/* ── Right side ── */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* ── Icons ── */
+.header-icons {
+    display: flex;
+    gap: 26px;
+    font-size: 23px;
+}
+
+.header-icons .icons {
     cursor: pointer;
-    transition: 0.3s;
+    color: #1a1a1a;
+    transition: color 0.25s, transform 0.25s;
 }
 
-.header-icons .icons:hover{
-    color: #f59e0b;
-    transition: 0.3s;
+.header-icons .icons:hover {
+    color: #b88e2f;
     transform: scale(1.2);
+}
+
+/* ── Hamburger ── */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #1a1a1a;
+    line-height: 1;
+}
+
+.hamburger-icon {
+    font-size: 28px;
+    transition: transform 0.3s ease;
+}
+
+/* =============================
+   MOBILE DRAWER
+   ============================= */
+.mobile-nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 998;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s ease;
+}
+
+.mobile-nav.open {
+    max-height: 320px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0 16px;
+}
+
+.mobile-nav ul li {
+    border-bottom: 1px solid #f5f0e8;
+}
+
+.mobile-nav ul li:last-child {
+    border-bottom: none;
+}
+
+.mobile-nav ul li a {
+    display: block;
+    padding: 14px 24px;
+    text-decoration: none;
+    color: #1a1a1a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s, padding-left 0.2s;
+}
+
+.mobile-nav ul li a:hover,
+.mobile-nav ul li a.active {
+    background-color: #fdf6ec;
+    color: #b88e2f;
+    padding-left: 32px;
+}
+
+/* ── Overlay ── */
+.nav-overlay {
+    position: fixed;
+    inset: 0;
+    top: 80px;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 997;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ============================
+   TABLET: 769px – 1024px
+   ============================ */
+@media (max-width: 1024px) and (min-width: 769px) {
+    header {
+        padding: 0 30px;
+    }
+
+    .desktop-nav ul li {
+        margin: 0 14px;
+        font-size: 15px;
+    }
+
+    .header-icons {
+        gap: 20px;
+        font-size: 21px;
+    }
+}
+
+/* ============================
+   MOBILE: ≤ 768px
+   ============================ */
+@media (max-width: 768px) {
+    header {
+        padding: 0 20px;
+        height: 65px;
+    }
+
+    /* Desktop nav yashirin */
+    .desktop-nav {
+        display: none;
+    }
+
+    /* Hamburger ko'rinsin */
+    .hamburger-btn {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-icons {
+        gap: 18px;
+        font-size: 20px;
+    }
+
+    .logo h1 {
+        font-size: 19px;
+    }
+
+    .logo img {
+        width: 34px;
+    }
+
+    .mobile-nav {
+        top: 65px;
+    }
+
+    .nav-overlay {
+        top: 65px;
+    }
+}
+
+/* ============================
+   KICHIK MOBIL: ≤ 480px
+   ============================ */
+@media (max-width: 480px) {
+    header {
+        padding: 0 14px;
+    }
+
+    .header-icons {
+        gap: 14px;
+        font-size: 18px;
+    }
+
+    .logo h1 {
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 28px;
+    }
 }
