@@ -10,6 +10,13 @@ import asgard3 from '../../assets/asgard3.png'
 import asgard4 from '../../assets/asgard4.png'
 import asgard5 from '../../assets/asgard5.png'
 
+import divan from '../../assets/divan.png'
+import divan2 from '../../assets/divan2.png'
+import card1 from '../../assets/card1.png'
+import card2 from '../../assets/card2.png'
+import card3 from '../../assets/card3.png'
+import card4 from '../../assets/card4.png'
+
 const Asgard = () => {
   const images = [asgard1, asgard2, asgard3, asgard4, asgard5]
   const [mainImage, setMainImage] = useState(asgard1)
@@ -144,6 +151,71 @@ const Asgard = () => {
 
         </div>
       </div>
+
+      {/* Description & Details Section */}
+      <div className="asgard-description-section">
+        <div className="tabs">
+          <h3 className="active">Description</h3>
+          <h3>Additional Information</h3>
+          <h3>Reviews [5]</h3>
+        </div>
+        <div className="tab-content">
+          <p>
+            Embodying the raw, wayward spirit of rock 'n' roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.
+          </p>
+          <p>
+            Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.
+          </p>
+        </div>
+        <div className="description-images">
+          <img src={divan} alt="Sofa details 1" />
+          <img src={divan2} alt="Sofa details 2" />
+        </div>
+      </div>
+
+      {/* Related Products Section */}
+      <div className="related-products">
+        <h2>Related Products</h2>
+        <div className="related-grid">
+          <div className="product-card">
+            <img src={card1} alt="Syltherine" />
+            <div className="product-info">
+              <h4>Syltherine</h4>
+              <p>Stylish cafe chair</p>
+              <h5>Rp 2.500.000 <span className="old-price">Rp 3.500.000</span></h5>
+            </div>
+            <div className="badge discount">-30%</div>
+          </div>
+          <div className="product-card">
+            <img src={card2} alt="Leviosa" />
+            <div className="product-info">
+              <h4>Leviosa</h4>
+              <p>Stylish cafe chair</p>
+              <h5>Rp 2.500.000</h5>
+            </div>
+          </div>
+          <div className="product-card">
+            <img src={card3} alt="Lolito" />
+            <div className="product-info">
+              <h4>Lolito</h4>
+              <p>Luxury big sofa</p>
+              <h5>Rp 7.000.000 <span className="old-price">Rp 14.000.000</span></h5>
+            </div>
+            <div className="badge discount">-50%</div>
+          </div>
+          <div className="product-card">
+            <img src={card4} alt="Respira" />
+            <div className="product-info">
+              <h4>Respira</h4>
+              <p>Outdoor bar table and stool</p>
+              <h5>Rp 500.000</h5>
+            </div>
+            <div className="badge new">New</div>
+          </div>
+        </div>
+        <button className="show-more-btn">Show More</button>
+      </div>
+
     </div>
   )
 }

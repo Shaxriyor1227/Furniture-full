@@ -374,3 +374,207 @@
     font-size: 28px;
   }
 }
+
+/* Description Section */
+.asgard-description-section {
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+  padding: 40px 60px;
+  max-width: 1440px;
+  margin: 0 auto 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+
+.tabs h3 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #9F9F9F;
+  cursor: pointer;
+  margin: 0;
+}
+
+.tabs h3.active {
+  color: #000;
+  font-weight: 500;
+}
+
+.tab-content {
+  max-width: 1000px;
+  text-align: left;
+  color: #9F9F9F;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.description-images {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.description-images img {
+  width: calc(50% - 15px);
+  background-color: #F9F1E7;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Related Products */
+.related-products {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.related-products h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.product-card {
+  background-color: #F4F5F7;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px 15px 30px;
+}
+
+.product-info h4 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: #3A3A3A;
+}
+
+.product-info p {
+  color: #898989;
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+.product-info h5 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #3A3A3A;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.old-price {
+  color: #B0B0B0;
+  font-size: 16px;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.badge.discount {
+  background-color: #E97171;
+}
+
+.badge.new {
+  background-color: #2EC1AC;
+}
+
+.show-more-btn {
+  background: white;
+  border: 1px solid #B88E2F;
+  color: #B88E2F;
+  padding: 15px 80px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.show-more-btn:hover {
+  background: #B88E2F;
+  color: white;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .description-images {
+    flex-direction: column;
+  }
+  .description-images img {
+    width: 100%;
+  }
+  .tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  .tabs h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+  .asgard-description-section, .related-products {
+    padding: 20px;
+  }
+  .tabs h3 {
+    font-size: 16px;
+  }
+}
+
