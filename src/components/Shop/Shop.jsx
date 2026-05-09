@@ -107,33 +107,35 @@ const Shop = () => {
         <div className="shop-grid">
           {products.map(product => (
             <div key={product.id} className="shop-card">
-              <div className="shop-card-img-wrap">
-                <img src={product.image} alt={product.name} className="shop-card-img" />
+              <NavLink to="/asgard" style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                <div className="shop-card-img-wrap">
+                  <img src={product.image} alt={product.name} className="shop-card-img" />
 
-                {product.discount && <span className="badge-discount">-{product.discount}%</span>}
-                {product.isNew    && <span className="badge-new">New</span>}
+                  {product.discount && <span className="badge-discount">-{product.discount}%</span>}
+                  {product.isNew    && <span className="badge-new">New</span>}
 
-                {/* Hover Overlay */}
-                <div className="shop-card-overlay">
-                  <button className="add-to-cart-btn">Add to cart</button>
-                  <div className="card-actions">
-                    <span className="card-action"><FiShare2 /> Share</span>
-                    <span className="card-action"><MdCompareArrows /> Compare</span>
-                    <span className="card-action"><FaRegHeart /> Like</span>
+                  {/* Hover Overlay */}
+                  <div className="shop-card-overlay">
+                    <button className="add-to-cart-btn" onClick={(e) => e.preventDefault()}>Add to cart</button>
+                    <div className="card-actions">
+                      <span className="card-action" onClick={(e) => e.preventDefault()}><FiShare2 /> Share</span>
+                      <span className="card-action" onClick={(e) => e.preventDefault()}><MdCompareArrows /> Compare</span>
+                      <span className="card-action" onClick={(e) => e.preventDefault()}><FaRegHeart /> Like</span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="shop-card-info">
-                <h3 className="card-name">{product.name}</h3>
-                <p className="card-category">{product.category}</p>
-                <div className="card-prices">
-                  <span className="card-price">Rp {product.price.toLocaleString('id-ID')}</span>
-                  {product.oldPrice && (
-                    <span className="card-old-price">Rp {product.oldPrice.toLocaleString('id-ID')}</span>
-                  )}
+                <div className="shop-card-info">
+                  <h3 className="card-name">{product.name}</h3>
+                  <p className="card-category">{product.category}</p>
+                  <div className="card-prices">
+                    <span className="card-price">Rp {product.price.toLocaleString('id-ID')}</span>
+                    {product.oldPrice && (
+                      <span className="card-old-price">Rp {product.oldPrice.toLocaleString('id-ID')}</span>
+                    )}
+                  </div>
                 </div>
-              </div>
+              </NavLink>
             </div>
           ))}
         </div>
