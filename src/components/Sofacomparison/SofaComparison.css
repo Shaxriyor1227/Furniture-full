@@ -1,0 +1,98 @@
+/* Comparison Table Details */
+.comparison-table-section {
+  max-width: 1440px;
+  margin: 60px auto;
+  padding: 0 60px;
+  border-top: 1px solid #E8E8E8;
+}
+
+.comparison-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.comparison-row {
+  display: flex;
+  border-bottom: 1px solid #E8E8E8;
+  padding: 20px 0;
+}
+
+.comparison-row.main-category {
+  border-bottom: none;
+  padding-top: 40px;
+}
+
+.comparison-row.main-category h3 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.feature-col {
+  flex: 1;
+  max-width: 300px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  padding-right: 20px;
+}
+
+.product-col {
+  flex: 1;
+  font-size: 16px;
+  color: #000;
+  padding: 0 20px;
+  border-left: 1px solid #E8E8E8;
+}
+
+.comparison-row.actions {
+  border-bottom: none;
+  padding-top: 40px;
+}
+
+.add-to-cart-btn {
+  background-color: #B88E2F;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #a67d28;
+}
+
+@media (max-width: 1024px) {
+  .comparison-table-section {
+    padding: 0 30px;
+  }
+  .feature-col {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .comparison-table-section {
+    padding: 0 20px;
+  }
+  .comparison-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .product-col {
+    border-left: none;
+    border-top: 1px solid #E8E8E8;
+    padding: 10px 0 0;
+  }
+  .feature-col {
+    max-width: 100%;
+    color: #727272;
+    font-size: 16px;
+  }
+  .comparison-row.main-category h3 {
+    font-size: 22px;
+  }
+}

@@ -8,6 +8,8 @@ import shopMain from '../../assets/shopMain.png'
 import Logo from '../../assets/Logo.png'
 import product from '../../assets/product.png'
 import product2 from '../../assets/product2.png'
+import SofaComparison from '../Sofacomparison/SofaComparison'
+import Quality from '../Quality/Quality'
 
 const Comparison = () => {
   return (
@@ -80,6 +82,12 @@ const Comparison = () => {
           </select>
         </div>
       </div>
+
+      {/* Comparison Table Section */}
+      <SofaComparison />
+
+      {/* Quality Section */}
+      <Quality />
     </div>
   )
 }
